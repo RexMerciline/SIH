@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Krishi Officer - AI-Powered 24x7 Virtual Krishi Officer</title>
+    <meta name="description" content="Digital Krishi Officer - Your AI-powered farming assistant providing 24x7 support for weather, pest control, loans, market prices and more">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Digital Krishi Officer Logo" class="logo-img">
+                <span class="logo-text">Digital Krishi Officer</span>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="machine-shop.html" class="nav-link">Machine Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="language-switcher">
+                    <button id="languageBtn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button onclick="changeLanguage('en')" class="lang-option">English</button>
+                        <button onclick="changeLanguage('hi')" class="lang-option">हिंदी</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-en="Digital Krishi Officer" data-hi="डिजिटल कृषि अधिकारी">Digital Krishi Officer</h1>
+                    <p class="hero-subtitle" data-en="Your AI-Powered 24x7 Virtual Farming Assistant" data-hi="आपका AI-संचालित 24x7 वर्चुअल कृषि सहायक">Your AI-Powered 24x7 Virtual Farming Assistant</p>
+                    <button class="cta-button" data-en="Get Started" data-hi="शुरू करें">
+                        <i class="fas fa-play"></i>
+                        Get Started
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-seedling hero-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title" data-en="Main Features" data-hi="मुख्य विशेषताएं">Main Features</h2>
+                <p class="section-subtitle" data-en="Everything you need for smart farming" data-hi="स्मार्ट खेती के लिए आपको जो कुछ भी चाहिए">Everything you need for smart farming</p>
+                
+                <div class="features-grid">
+                    <!-- Weather Alerts -->
+                    <div class="feature-card" onclick="openFeature('weather')">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h3 class="feature-title" data-en="Weather Alerts" data-hi="मौसम अलर्ट">Weather Alerts</h3>
+                        <p class="feature-desc" data-en="Real-time weather updates and alerts for your crops" data-hi="आपकी फसलों के लिए वास्तविक समय मौसम अपडेट और अलर्ट">Real-time weather updates and alerts for your crops</p>
+                    </div>
+
+                    <!-- Pest/Disease Control -->
+                    <div class="feature-card" onclick="openFeature('pest')">
+                        <div class="feature-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3 class="feature-title" data-en="Pest & Disease Control" data-hi="कीट और रोग नियंत्रण">Pest & Disease Control</h3>
+                        <p class="feature-desc" data-en="AI-powered pest identification and treatment solutions" data-hi="AI-संचालित कीट पहचान और उपचार समाधान">AI-powered pest identification and treatment solutions</p>
+                    </div>
+
+                    <!-- Loans & Schemes -->
+                    <div class="feature-card" onclick="openFeature('loans')">
+                        <div class="feature-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 class="feature-title" data-en="Loans & Government Schemes" data-hi="ऋण और सरकारी योजनाएं">Loans & Government Schemes</h3>
+                        <p class="feature-desc" data-en="Access to agricultural loans and government benefits" data-hi="कृषि ऋण और सरकारी लाभों तक पहुंच">Access to agricultural loans and government benefits</p>
+                    </div>
+
+                    <!-- Market Prices -->
+                    <div class="feature-card" onclick="openFeature('market')">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title" data-en="Market Price Tracking" data-hi="बाजार मूल्य ट्रैकिंग">Market Price Tracking</h3>
+                        <p class="feature-desc" data-en="Live market prices and best selling locations" data-hi="लाइव बाजार मूल्य और सर्वोत्तम बिक्री स्थान">Live market prices and best selling locations</p>
+                    </div>
+
+                    <!-- Labour Connect -->
+                    <div class="feature-card" onclick="openFeature('labour')">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="feature-title" data-en="Labour Connect" data-hi="मजदूर कनेक्ट">Labour Connect</h3>
+                        <p class="feature-desc" data-en="Find skilled agricultural workers in your area" data-hi="अपने क्षेत्र में कुशल कृषि मजदूर खोजें">Find skilled agricultural workers in your area</p>
+                    </div>
+
+                    <!-- AI Query Support -->
+                    <div class="feature-card ai-feature" onclick="openFeature('ai')">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 class="feature-title" data-en="Ask Your Krishi Officer" data-hi="अपने कृषि अधिकारी से पूछें">Ask Your Krishi Officer</h3>
+                        <p class="feature-desc" data-en="Voice-enabled AI assistant for instant farming guidance" data-hi="तुरंत कृषि मार्गदर्शन के लिए आवाज-सक्षम AI सहायक">Voice-enabled AI assistant for instant farming guidance</p>
+                        <div class="ai-badge">
+                            <i class="fas fa-robot"></i>
+                            <span data-en="AI Powered" data-hi="AI संचालित">AI Powered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <div class="container">
+                <h2 class="section-title" data-en="Quick Actions" data-hi="त्वरित कार्य">Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="machine-shop.html" class="action-btn">
+                        <i class="fas fa-tractor"></i>
+                        <span data-en="Buy Farm Equipment" data-hi="कृषि उपकरण खरीदें">Buy Farm Equipment</span>
+                    </a>
+                    <button class="action-btn" onclick="startVoiceChat()">
+                        <i class="fas fa-microphone"></i>
+                        <span data-en="Voice Assistant" data-hi="आवाज सहायक">Voice Assistant</span>
+                    </button>
+                    <a href="contact.html" class="action-btn">
+                        <i class="fas fa-phone"></i>
+                        <span data-en="Get Help" data-hi="सहायता प्राप्त करें">Get Help</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.svg" alt="Digital Krishi Officer Logo" class="logo-img">
+                        <span class="logo-text">Digital Krishi Officer</span>
+                    </div>
+                    <p data-en="Your trusted AI farming companion available 24x7" data-hi="आपका विश्वसनीय AI कृषि साथी 24x7 उपलब्ध">Your trusted AI farming companion available 24x7</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li>
+                        <li><a href="machine-shop.html" data-en="Machine Shop" data-hi="मशीन शॉप">Machine Shop</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-hi="संपर्क जानकारी">Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                    <p><i class="fas fa-envelope"></i> support@digitalkrishi.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-en="© 2024 Digital Krishi Officer. All rights reserved." data-hi="© 2024 डिजिटल कृषि अधिकारी। सभी अधिकार सुरक्षित।">© 2024 Digital Krishi Officer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
